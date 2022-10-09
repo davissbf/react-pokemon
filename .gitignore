@@ -11,6 +11,7 @@
 
 .idea
 package-lock.json
+.env
 
 # production
 /build
