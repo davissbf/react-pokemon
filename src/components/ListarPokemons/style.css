@@ -1,0 +1,36 @@
+.DivPrincipal {
+}
+
+.DivImg {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: start;
+}
+
+.ImgPokemon {
+    display: flex;
+}
+
+.DivBotao {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.ButaoListarPokemon {
+    padding: 8px;
+    background-color: transparent;
+    border-color: white;
+    cursor: pointer;
+}
+
+.ButaoListarPokemon:hover {
+    background-color: aliceblue;
+}
+
+.ButaoListarImgPokemon {
+    padding: 8px;
+    background-color: transparent;
+    border-color: white;
+    cursor: pointer;
+}

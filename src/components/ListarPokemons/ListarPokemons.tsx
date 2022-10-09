@@ -1,13 +1,15 @@
 import axios from "axios";
 import {useState} from "react";
 
+import "./style.css";
+
 const ListarPokemonsComponent = () => {
     const [pokemons, setPokemons] = useState([]);
 
     const [objImgPokemons, setObjImgPokemons] = useState([{}]);
 
     const listarPokemons = async () => {
-        const result = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=3");
+        const result = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=20");
 
         setPokemons(result.data.results);
     };
@@ -26,17 +28,17 @@ const ListarPokemonsComponent = () => {
     };
 
     return (
-        <div>
-            <div>
+        <div className="DivPrincipal">
+            <div className="DivImg">
                 {
                     objImgPokemons.map((objPokemon: any, index: number) => (
-                        <img key={index} src={objPokemon.img} alt={objPokemon.nome} />
+                        <img className="ImgPokemon" key={index} src={objPokemon.img} alt={objPokemon.nome} />
                     ))
                 }
             </div>
-            <div>
-                <button onClick={listarPokemons}>Listar Pokemons</button>
-                <button onClick={listarImgPokemons}>Listar Img Pokemons</button>
+            <div className="DivBotao">
+                <button className="ButaoListarPokemon" onClick={listarPokemons}>Listar Pokemons</button>
+                <button className="ButaoListarImgPokemon" onClick={listarImgPokemons}>Listar Img Pokemons</button>
             </div>
         </div>
     )
