@@ -1,0 +1,9 @@
+/*.divImgPokemon {*/
+/*    display: flex;*/
+/*    justify-content: space-evenly;*/
+/*    flex-flow: wrap;*/
+/*}*/
+
+.imgPokemon {
+    background: linear-gradient(90deg, #78C850 50%, #A040A0 50%);
+}
